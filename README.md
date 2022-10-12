@@ -3,7 +3,7 @@ Este projeto foi desenvolvido para treinar meus conhecimentos em HTML e CSS e te
 
 ## Preview
 <img src="./preview.png" alt="preview-site"/>
-
+Você pode ver o site ao vivo clicando <a href="https://mayron1806.github.io/chainsaw-man/">aqui</a>
 
 # Creditos
 - Imagem principal do site: <a href="https://twitter.com/asevcart">sev</a>
