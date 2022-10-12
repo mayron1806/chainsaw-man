@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+:root{
+    --black: #323232;
+    --red: #971709;
+    --orange: #CD3F1B;
+    --white: #E1D3D2;
+    --spoiler: rgba(151, 23, 9, .6);
+}
+html{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 62.5%;
+    scroll-behavior:smooth;
+}
+body{
+    background-color: var(--black);
+    overflow-x: hidden;
+}
+.title{
+    font-size: 4rem;
+    color: var(--white);
+}
+/* HEADER ======================================================= */
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-size: 3rem;
+    padding: 1rem;
+    font-weight: 700;
+    z-index: 100;
+    background-color: var(--red);
+}
+.menu{
+    height: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+.menu-option a{
+    color: var(--white);
+    position: relative;
+}
+.menu-option a::after{
+    content: "";
+    position: absolute;
+    background-color: var(--black);
+    width: 0%;
+    height: 5px;
+    bottom: -10px;
+    left: 0;
+    border-radius: 5px;
+    transition: 0.5s;
+    display: flex;
+}
+.menu-option a:hover::after{
+    width: 100%;
+}
+/* HOME ======================================================= */
+.home{
+    width: 100vw;
+    height: 100vh;
+}
+.home-content{
+    padding: 10rem;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+    gap: 2rem;
+}
+.home-content h1{
+    font-size: 5rem;
+}
+.home-content p{
+    font-size: 2rem;
+}
+.home-content a{
+    background: url("./assets/images/button-bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 2rem;
+    color: var(--orange);
+}
+.home-content a > img{
+    width: 6rem;
+}
+.home main::before{
+    content: url("./assets/images/blood-8347.png");
+    width: fit-content;
+    height: auto;
+    position: absolute;
+    top: -40%; 
+    left: -30%;
+    z-index: -1;
+}
+.home main::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: -20%;
+    z-index: -1;
+    background: url("./assets/images/denji-chainsaw-man.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: scaleX(-1);
+}
+.home > svg{
+    z-index: -1;
+    position: absolute;
+    bottom: -3rem;
+    width: 100vw;
+}
+/* TRAILER ======================================================= */
+.trailer{
+    background-color: var(--orange);
+    padding: 2rem 10rem;
+    padding-bottom: 15rem;
+    position: relative;
+}
+.trailer .content{
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+}
+.trailer svg{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+/* CHARACTERS ======================================================= */
+#characters{
+    padding: 0 10rem;
+    padding-bottom: 15rem;
+    position: relative;
+}
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);    
+    grid-gap: 1rem;
+    margin: 2rem 0;
+}
+.card{
+    background-color: var(--white);
+    font-size: 2rem;
+    width: 25.2rem;
+    height: 38.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    transition: 0.6s;
+    position: relative;
+    overflow: hidden;
+}
+.card .spoiler{
+    top: 100%;
+    position: absolute;
+    width: 101%;
+    height: 102%;
+    background-color: var(--spoiler);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .6s ease-out;
+}
+.card .spoiler.on{
+    top: -1%;
+}
+.card:hover{
+    box-shadow: 0 0  10px var(--black);
+}
+.card-image{
+    width: 100%;
+    height: 85%;
+}
+.card .card-name{
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--orange);
+}
+/* CHAR LIST ======================================================= */
+#chars{
+    position: relative;
+}
+.characters-list{
+    padding-top: 5rem;
+    color: var(--white);
+    padding: 0 10rem;
+}
+.character{
+    display: flex;
+    justify-content: space-between; 
+    margin-bottom: 5rem;
+}
+.character .text{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.character .text h3{
+    font-size: 3rem;
+}
+.character .text p{
+    font-size: 2rem;
+}   
+.character img{
+    width: 400px;
+    height: auto;
+}
